@@ -30,9 +30,9 @@ Format:
 4. 💡 Expected SQL Solution & Explanation
 """
 
-# Generate SQL Question using Gemini 2.5 Flash
+# Generate SQL Question using Gemini 3.8 Flash
 response = client.models.generate_content(
-    model="gemini-2.5-flash",
+    model="gemini-3.8-flash",
     contents=prompt
 )
 
@@ -56,4 +56,4 @@ else:
 # Save history record
 history.append("SQL Practice Problem")
 with open(history_file, "w") as f:
-        json.dump(history, f, indent=2)
+    json.dump(history, f, indent=2)
