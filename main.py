@@ -36,6 +36,7 @@ response = client.models.generate_content(
     contents=prompt
 )
 
+
 question_text = response.text
 
 # Send message to Telegram
