@@ -10,9 +10,6 @@ permissions:
 
 jobs:
   run-agent:
-
-jobs:
-  run-agent:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
