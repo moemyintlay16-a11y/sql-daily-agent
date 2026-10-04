@@ -30,9 +30,9 @@ Format:
 4. 💡 Expected SQL Solution & Explanation
 """
 
-# Generate SQL Question using Gemini 3.8 Flash
+# Generate SQL Question using gemini-2.5-flash
 response = client.models.generate_content(
-    model="gemini-3.8-flash",
+    model="gemini-2.5-flash",
     contents=prompt
 )
 
