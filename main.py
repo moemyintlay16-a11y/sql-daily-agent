@@ -32,7 +32,7 @@ Keep the format concise:
 
 # Generate SQL Question using Gemini 2.0 Flash
 response = client.models.generate_content(
-    model="gemini-2.0-flash",
+    model="gemini-3.5-flash",
     contents=prompt
 )
 
