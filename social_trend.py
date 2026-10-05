@@ -19,7 +19,7 @@ Keep the format clean with emojis, bullet points, and clear separation between E
 
 # Generate content using Gemini 2.0 Flash
 response = client.models.generate_content(
-    model="gemini-2.0-flash",
+    model="gemini-3.5-flash",
     contents=prompt
 )
 
