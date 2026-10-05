@@ -20,19 +20,19 @@ else:
 client = genai.Client(api_key=GEMINI_API_KEY)
 
 prompt = f"""
-Create a short, concise practical daily SQL question.
+You are a friendly SQL instructor. Create a practical daily SQL practice question strictly limited to **Basic to Intermediate** level (e.g., SELECT, WHERE, GROUP BY, HAVING, basic JOINs). Avoid overly complex subqueries or advanced window functions.
 Avoid repeating these past topics: {json.dumps(history)}
 
-Keep the format concise:
-1. 🎯 Topic & Difficulty
-2. 📋 Schema & Data
+Keep the format concise and clear:
+1. 🎯 Topic & Difficulty (Basic or Intermediate)
+2. 📋 Schema & Sample Data
 3. ❓ Question
-4. 💡 Solution & Explanation
+4. 💡 Expected SQL Solution & Explanation
 """
 
-# Generate SQL Question using Gemini 2.0 Flash
+# Generate SQL Question using Gemini 3.8 Flash
 response = client.models.generate_content(
-    model="gemini-3.5-flash",
+    model="gemini-3.8-flash",
     contents=prompt
 )
 
